@@ -28,9 +28,9 @@
 
     <!-- Center content -->
     <ion-side-menu-content>
-      <ion-header-bar class="bar">
+      <ion-header-bar class="bar" >
         <h1 class="title">Dick Smith</h1>
-        <button ng-click="toggleRightSideMenu()" class="button button-icon icon ion-navicon"></button>
+        <button ng-controller="NavCtrl" ng-click="toggleRightSideMenu()" class="button button-icon icon ion-navicon"></button>
       </ion-header-bar>
       <ion-content>
         <ion-list ng-controller="CategoryCtrl">

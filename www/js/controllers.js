@@ -18,7 +18,14 @@ angular.module('mobilecart.controllers', [])
   $scope.toggleRightSideMenu = function(){
     $ionicSideMenuDelegate.toggleRight();
   }
-
+})
+.controller('SideMenuCtrl', function($scope){
+  $scope.menuOptions = [
+    {title: 'Login', url: '/login'},
+    {title: 'My Cart', url: '/cart'},
+    {title: 'Find a Store', url: '/storefinder'},
+    {title: 'About', url: '/about'}
+  ];
 })
 ;
 

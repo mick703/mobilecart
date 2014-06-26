@@ -19,4 +19,21 @@ angular.module('mobilecart', ['ionic', 'mobilecart.controllers', 'mobilecart.ser
       StatusBar.styleDefault();
     }
   });
-});
+})
+.config(function($stateProvider, $urlRouterProvider){
+  $stateProvider
+  .state('app', {
+    url: '/app',
+    abstract: true,
+    templateUrl: 'templates/menu.html',
+    controller: 'AppCtrl'
+  })
+  .state('app.index', {
+    url: '/index',
+    views: {
+      'menuContent': 'templates/index.html'
+    }
+  })
+  $urlRouterProvider.otherwise('/app/index')
+
+})

@@ -14,10 +14,10 @@ angular.module('mobilecart.controllers', [])
     {title: 'Promotions'}
   ];
 })
-.controller('NavCtrl', function($scope, $ionicSideMenuDelegate){
-  $scope.toggleRightSideMenu = function(){
-    $ionicSideMenuDelegate.toggleRight();
-  }
+.controller('AppCtrl', function($scope, $ionicSideMenuDelegate){
+  // $scope.toggleRightSideMenu = function(){
+  //   $ionicSideMenuDelegate.toggleRight();
+  // }
 })
 .controller('SideMenuCtrl', function($scope){
   $scope.menuOptions = [

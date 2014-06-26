@@ -1,0 +1,33 @@
+<ion-side-menus>
+  <ion-header-bar class="bar" >
+  <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">
+    Back
+  </ion-nav-back-button>
+    <h1 class="title">Mobile Cart</h1>
+    <button menu-toggle="right" class="button button-icon icon ion-navicon"></button>
+  </ion-header-bar>
+
+
+  <ion-side-menu side="right">
+    <header class="bar bar-header bar-stable">
+      <h1 class="title">Left</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item nav-clear menu-close ng-click="login()">
+          Login
+        </ion-item>
+        <ion-item nav-clear menu-close ui-sref="#/app/search">
+          Search
+        </ion-item>
+        <ion-item nav-clear menu-close ui-sref="#/app/browse">
+          Browse
+        </ion-item>
+        <ion-item nav-clear menu-close ui-sref="#/app/playlists">
+          Playlists
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus>

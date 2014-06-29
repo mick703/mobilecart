@@ -1,19 +1,14 @@
 angular.module('mobilecart.controllers', [])
 
-.controller('IndexCtrl', function($scope){
-  console.log('IndexCtrl called.');
-  $scope.categories = [
-    {title: 'TV & Video', id: 1},
-    {title: 'Audio & MP3', id: 2},
-    {title: 'Photography', id: 3},
-    {title: 'Computers & Tablets', id: 4},
-    {title: 'Printers & Office', id: 5},
-    {title: 'Mobiles & Wireless', id:6},
-    {title: 'Navigation & Travel', id:7},
-    {title: 'Gaming', id:8},
-    {title: 'Home & Security', id:9},
-    {title: 'Promotions', id:10}
-  ];
+.controller('IndexCtrl', function($scope, Categories){
+  // console.log('IndexCtrl called.');
+    $scope.categories = Categories.all();
+ })
+.controller('CategoryCtrl', function($scope, $stateParams, Categories){
+  console.log('CategoryCtrl called.');
+  $scope.category = Categories.get($stateParams.categoryId);
+  // $scope.category = {title: 'dummy category', id: 123};
+
 })
 .controller('AppCtrl', function($scope, $ionicSideMenuDelegate){
 

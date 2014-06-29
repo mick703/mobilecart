@@ -31,14 +31,22 @@ angular.module('mobilecart', ['ionic', 'mobilecart.controllers', 'mobilecart.ser
   .state('app.index', {
     url: '/index',
     views: {
-      'menuContent':
-      {
+      'menuContent': {
         templateUrl: 'templates/index.html',
         controller: 'IndexCtrl'
       }
     }
 
   })
-  $urlRouterProvider.otherwise('/app/index')
+  .state('app.category', {
+    url: '/categories/:categoryId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/category.html',
+        controller: 'CategoryCtrl'
+      }
+    }
+  });
+  $urlRouterProvider.otherwise('/app/index');
 
 })

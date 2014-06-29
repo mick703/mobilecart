@@ -31,8 +31,13 @@ angular.module('mobilecart', ['ionic', 'mobilecart.controllers', 'mobilecart.ser
   .state('app.index', {
     url: '/index',
     views: {
-      'menuContent': 'templates/index.html'
+      'menuContent':
+      {
+        templateUrl: 'templates/index.html',
+        controller: 'IndexCtrl'
+      }
     }
+
   })
   $urlRouterProvider.otherwise('/app/index')
 

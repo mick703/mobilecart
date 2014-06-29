@@ -1,23 +1,22 @@
 angular.module('mobilecart.controllers', [])
 
-.controller('CategoryCtrl', function($scope){
+.controller('IndexCtrl', function($scope){
+  console.log('IndexCtrl called.');
   $scope.categories = [
-    {title: 'TV & Video'},
-    {title: 'Audio & MP3'},
-    {title: 'Photography'},
-    {title: 'Computers & Tablets'},
-    {title: 'Printers & Office'},
-    {title: 'Mobiles & Wireless'},
-    {title: 'Navigation & Travel'},
-    {title: 'Gaming'},
-    {title: 'Home & Security'},
-    {title: 'Promotions'}
+    {title: 'TV & Video', id: 1},
+    {title: 'Audio & MP3', id: 2},
+    {title: 'Photography', id: 3},
+    {title: 'Computers & Tablets', id: 4},
+    {title: 'Printers & Office', id: 5},
+    {title: 'Mobiles & Wireless', id:6},
+    {title: 'Navigation & Travel', id:7},
+    {title: 'Gaming', id:8},
+    {title: 'Home & Security', id:9},
+    {title: 'Promotions', id:10}
   ];
 })
 .controller('AppCtrl', function($scope, $ionicSideMenuDelegate){
-  // $scope.toggleRightSideMenu = function(){
-  //   $ionicSideMenuDelegate.toggleRight();
-  // }
+
 })
 .controller('SideMenuCtrl', function($scope){
   $scope.menuOptions = [

@@ -1,12 +1,14 @@
 <ion-side-menus>
-  <ion-header-bar class="bar" >
-  <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">
-    Back
-  </ion-nav-back-button>
-    <h1 class="title">Mobile Cart</h1>
-    <button menu-toggle="right" class="button button-icon icon ion-navicon"></button>
-  </ion-header-bar>
 
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+  <ion-nav-buttons side="right">
+    <button menu-toggle="right" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
 
   <ion-side-menu side="right">
     <header class="bar bar-header bar-stable">
@@ -17,17 +19,16 @@
         <ion-item nav-clear menu-close ng-click="login()">
           Login
         </ion-item>
-        <ion-item nav-clear menu-close ui-sref="#/app/search">
+        <ion-item nav-clear menu-close href="#/app/search">
           Search
         </ion-item>
-        <ion-item nav-clear menu-close ui-sref="#/app/browse">
+        <ion-item nav-clear menu-close href="#/app/browse">
           Browse
         </ion-item>
-        <ion-item nav-clear menu-close ui-sref="#/app/playlists">
+        <ion-item nav-clear menu-close href="#/app/playlists">
           Playlists
         </ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>
-
 </ion-side-menus>
